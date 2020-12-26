@@ -1,4 +1,5 @@
 import os
+import pytz
 import time
 import datetime
 
@@ -38,10 +39,10 @@ def main():
                     edit_text += f"@{bot} - ✅\n\n"
                 user_client.read_history(bot)
 
-            utc_now = datetime.datetime.utcnow()
-            ist_now = utc_now + datetime.timedelta(minutes=30, hours=5)
+            time_now = datetime.datetime.now(pytz.timezone('Asia/Kolkata'))
+            formatted_time = time_now.strftime("%d %B %Y %I:%M %p")
 
-            edit_text += f"__Last checked on \n{str(utc_now)} UTC\n{ist_now} IST__"
+            edit_text += f"__Last checked on \n{formatted_time} (**INDIAN TIMEZONE**)__"
 
             user_client.edit_message_text(update_channel, status_message_id,
                                          edit_text)
