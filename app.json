@@ -32,9 +32,9 @@
       "description": "The id of a channel to which i need to send the current status",
       "value": "-1001221642755"
     },
-    "AUTH_USERS": {
-      "description": "Give the id of the owner who can broadcast,  ban, unban, etc",
-      "value": "1337144652"
+    "status_message_id": {
+      "description": "Give the id of messagw which need to be edited",
+      "value": "250"
     },
     "BANNED_USERS": {
       "description": "Banned Unwanted members..",
