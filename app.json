@@ -1,7 +1,6 @@
 {
-  "name": "Zee5 Bot",
+  "name": "Bot Status",
   "description": "The Telegram bot that can upload the videos to telegram from zee5 links.",
-  "logo": "https://telegra.ph/file/ee36264480072534b9554.jpg",
   "keywords": [
     "telegram",
     "best",
@@ -17,8 +16,8 @@
       "description": "Setting this to ANYTHING will enable webhooks when in env mode",
       "value": "ANYTHING"
     },
-    "BOT_TOKEN": {
-      "description": "Your bot token, as a string.",
+    "user_session_string": {
+      "description": "Your string session.",
       "value": ""
     },
     "API_ID": {
