@@ -32,8 +32,8 @@ def main():
                 if snt.message_id == msg.message_id:
                     print(f"[WARNING] @{bot} is down")
                     edit_text += f"@{bot} - ❌\n\n"
-                    user_client.send_message(bot_owner,
-                                             f"@{bot} - ❌")
+                    user_client.send_message("me",
+                                             f"@{bot} was down")
                 else:
                     print(f"[INFO] all good with @{bot}")
                     edit_text += f"@{bot} - ✅\n\n"
