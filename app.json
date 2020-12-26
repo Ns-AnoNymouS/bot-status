@@ -20,11 +20,11 @@
       "description": "Your string session.",
       "value": ""
     },
-    "API_ID": {
+    "api_id": {
       "description": "Get this value from https://my.telegram.org",
       "value": ""
     },
-    "API_HASH": {
+    "ai_hash": {
       "description": "Get this value from https://my.telegram.org",
       "value": ""
     },
@@ -36,21 +36,8 @@
       "description": "Give the id of messagw which need to be edited",
       "value": "250"
     },
-    "BANNED_USERS": {
-      "description": "Banned Unwanted members..",
-      "value": "",
-      "required": false
-    },
-    "DATABASE_URL": {
-      "description": "Mongodb token for saving the users data",
-      "value": ""
-    },
-    "CHUNK_SIZE": {
-      "description": "chunk size that should be used with requests",
-      "value": "128"
-    },
-    "HTTP_PROXY": {
-      "description": "proxy for accessing youtube-dl in GeoRestricted Areas. Get your own proxy from https://github.com/rg3/youtube-dl/issues/1091#issuecomment-230163061",
+    "bots": {
+      "description": "list of bot usernames",
       "value": "",
       "required": false
     }
