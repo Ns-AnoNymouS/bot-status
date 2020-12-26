@@ -28,9 +28,9 @@
       "description": "Get this value from https://my.telegram.org",
       "value": ""
     },
-    "TRACE_CHANNEL": {
+    "update_channel": {
       "description": "The id of a channel to which i need to send the current status",
-      "value": "-1001288011574"
+      "value": "-1001221642755"
     },
     "AUTH_USERS": {
       "description": "Give the id of the owner who can broadcast,  ban, unban, etc",
