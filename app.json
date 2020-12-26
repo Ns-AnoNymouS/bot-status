@@ -1,1 +1,73 @@
+{
+  "name": "Zee5 Bot",
+  "description": "The Telegram bot that can upload the videos to telegram from zee5 links.",
+  "logo": "https://telegra.ph/file/ee36264480072534b9554.jpg",
+  "keywords": [
+    "telegram",
+    "best",
+    "Zee5",
+    "downloader",
+    "uploader"
+  ],
+  "success_url": "https://telegram.dog/Zee5_premium_Nsbot",
+  "website": "https://github.com/Ns-AnoNymouS/Zee5-2.0",
+  "repository": "https://github.com/Ns-AnoNymouS/Zee5-2.0",
+  "env": {
+    "WEBHOOK": {
+      "description": "Setting this to ANYTHING will enable webhooks when in env mode",
+      "value": "ANYTHING"
+    },
+    "BOT_TOKEN": {
+      "description": "Your bot token, as a string.",
+      "value": ""
+    },
+    "API_ID": {
+      "description": "Get this value from https://my.telegram.org",
+      "value": ""
+    },
+    "API_HASH": {
+      "description": "Get this value from https://my.telegram.org",
+      "value": ""
+    },
+    "TRACE_CHANNEL": {
+      "description": "The id of a channel to which i need to send the current status",
+      "value": "-1001288011574"
+    },
+    "AUTH_USERS": {
+      "description": "Give the id of the owner who can broadcast,  ban, unban, etc",
+      "value": "1337144652"
+    },
+    "BANNED_USERS": {
+      "description": "Banned Unwanted members..",
+      "value": "",
+      "required": false
+    },
+    "DATABASE_URL": {
+      "description": "Mongodb token for saving the users data",
+      "value": ""
+    },
+    "CHUNK_SIZE": {
+      "description": "chunk size that should be used with requests",
+      "value": "128"
+    },
+    "HTTP_PROXY": {
+      "description": "proxy for accessing youtube-dl in GeoRestricted Areas. Get your own proxy from https://github.com/rg3/youtube-dl/issues/1091#issuecomment-230163061",
+      "value": "",
+      "required": false
+    }
+  },
+  "addons": [
+  ],
+  "buildpacks": [{
+    "url": "https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest"
+  }, {
+    "url": "heroku/python"
+  }],
+  "formation": {
+    "worker": {
+      "quantity": 1,
+      "size": "free"
+    }
+  }
+}
 
