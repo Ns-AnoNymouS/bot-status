@@ -43,7 +43,7 @@ def main():
 
             edit_text += f"__Last checked on \n{formatted_time} (**INDIAN TIMEZONE**)__"
 
-            user_client.edit_message_text(update_channel, status_message_id,
+            user_client.edit_message_text(int(update_channel), status_message_id,
                                          edit_text)
             print(f"[INFO] everything done! sleeping for 15 mins...")
 
