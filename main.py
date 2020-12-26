@@ -20,7 +20,7 @@ def main():
     with user_client:
         while True:
             print("[INFO] starting to check uptime..")
-            edit_text = f"@{update_channel} Bot's Uptime Status.(Updated every 15 mins)\n\n"
+            edit_text = f"NS BOTS Uptime Status.(Updated every 15 mins)\n\n"
             for bot in bots:
                 print(f"[INFO] checking @{bot}")
                 snt = user_client.send_message(bot, '/start')
@@ -30,18 +30,18 @@ def main():
                 msg = user_client.get_history(bot, 1)[0]
                 if snt.message_id == msg.message_id:
                     print(f"[WARNING] @{bot} is down")
-                    edit_text += f"@{bot} status: `Down`\n\n"
+                    edit_text += f"@{bot} - ❌\n\n"
                     user_client.send_message(bot_owner,
-                                             f"@{bot} status: `Down`")
+                                             f"@{bot} - ❌")
                 else:
                     print(f"[INFO] all good with @{bot}")
-                    edit_text += f"@{bot} status: `Up`\n\n"
+                    edit_text += f"@{bot} - ✅\n\n"
                 user_client.read_history(bot)
 
             utc_now = datetime.datetime.utcnow()
             ist_now = utc_now + datetime.timedelta(minutes=30, hours=5)
 
-            edit_text += f"__last checked on \n{str(utc_now)} UTC\n{ist_now} IST__"
+            edit_text += f"__Last checked on \n{str(utc_now)} UTC\n{ist_now} IST__"
 
             user_client.edit_message_text(update_channel, status_message_id,
                                          edit_text)
