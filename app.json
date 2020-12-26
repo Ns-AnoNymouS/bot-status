@@ -24,7 +24,7 @@
       "description": "Get this value from https://my.telegram.org",
       "value": ""
     },
-    "ai_hash": {
+    "api_hash": {
       "description": "Get this value from https://my.telegram.org",
       "value": ""
     },
