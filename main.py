@@ -7,7 +7,6 @@ import pyrogram
 
 user_session_string = os.environ.get("user_session_string")
 bots = [i.strip() for i in os.environ.get("bots").split(' ')]
-bot_owner = os.environ.get("bot_owner")
 update_channel = os.environ.get("update_channel")
 status_message_id = int(os.environ.get("status_message_id"))
 api_id = int(os.environ.get("api_id"))
