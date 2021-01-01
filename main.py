@@ -50,4 +50,5 @@ def main():
             time.sleep(15 * 60)
 
 
-main()
+if __init__ = "__main__":
+   main()
