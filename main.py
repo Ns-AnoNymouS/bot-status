@@ -50,5 +50,5 @@ def main():
             time.sleep(15 * 60)
 
 
-if __init__ == "__main__":
+if __name__ == "__main__":
    main()
