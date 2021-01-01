@@ -17,6 +17,8 @@ def main():
             user_client = Client(
                 user_session_string, api_id=api_id, api_hash=api_hash)
 
+            user_client.start()
+
             print("[INFO] starting to check uptime..")
             edit_text = f"**NS BOTS Status** (Updated every 15 mins)\n\n"
             for bot in bots:
@@ -47,7 +49,7 @@ def main():
 
             time.sleep(15 * 60)
 
-            user_client.run_until_complete()
+            user_client.stop()
 
 if __name__ == "__main__":
    main()
