@@ -47,7 +47,7 @@ def main():
 
             time.sleep(15 * 60)
 
-            user_client.run()
+            user_client.run_until_complete()
 
 if __name__ == "__main__":
    main()
