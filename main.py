@@ -11,14 +11,13 @@ update_channel = os.environ.get("update_channel")
 status_message_id = int(os.environ.get("status_message_id"))
 api_id = int(os.environ.get("api_id"))
 api_hash = os.environ.get("api_hash")
+user_client = Client(
+                user_session_string, api_id=api_id, api_hash=api_hash)
 
 
 def main():
-            user_client = Client(
-                user_session_string, api_id=api_id, api_hash=api_hash)
-
-            user_client.start()
-
+    with user_client:
+        while True:
             print("[INFO] starting to check uptime..")
             edit_text = f"**NS BOTS Status** (Updated every 15 mins)\n\n"
             for bot in bots:
@@ -49,7 +48,6 @@ def main():
 
             time.sleep(15 * 60)
 
-            user_client.stop()
 
 if __name__ == "__main__":
    main()
