@@ -3,14 +3,9 @@
   "description": "The Telegram bot that can upload the videos to telegram from zee5 links.",
   "keywords": [
     "telegram",
-    "best",
-    "Zee5",
-    "downloader",
-    "uploader"
+    "best"
   ],
-  "success_url": "https://telegram.dog/Zee5_premium_Nsbot",
-  "website": "https://github.com/Ns-AnoNymouS/Zee5-2.0",
-  "repository": "https://github.com/Ns-AnoNymouS/Zee5-2.0",
+  "repository": "https://github.com/Ns-AnoNymouS/bot-status/tree/master",
   "env": {
     "WEBHOOK": {
       "description": "Setting this to ANYTHING will enable webhooks when in env mode",
@@ -30,11 +25,11 @@
     },
     "update_channel": {
       "description": "The id of a channel to which i need to send the current status",
-      "value": "-1001221642755"
+      "value": ""
     },
     "status_message_id": {
-      "description": "Give the id of messagw which need to be edited",
-      "value": "250"
+      "description": "Give the id of messagw which need to be edited you can give more than one id and separt with space",
+      "value": ""
     },
     "bots": {
       "description": "list of bot usernames",
