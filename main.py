@@ -41,9 +41,10 @@ def main():
 
             edit_text += f"__Last checked on {formatted_time} (**IST**)__"
 
+            buttons = [[InlineKeyboardButton("🔰 Mirror Group 🔰", url="https://t.me/joinchat/dHhyZR9msMAxMDc8")]]
             for status_message_id in status_message_ids:
                 user_client.edit_message_text(int(update_channel), status_message_id,
-                                         edit_text)
+                                         edit_text, reply_markup=InlineKeyboardMarkup(buttons))
                 time.sleep(5)
             print(f"[INFO] everything done! sleeping for 15 mins...")
 
