@@ -1,54 +1,50 @@
 {
-  "name": "Bot Status",
-  "description": "The Telegram bot that can upload the videos to telegram from zee5 links.",
+  "name": "Bot Status Checker",
+  "description": "A Telegram bot that monitors the uptime status of specified bots and updates in a designated channel.",
   "keywords": [
     "telegram",
-    "best"
+    "bot",
+    "status",
+    "uptime",
+    "monitoring"
   ],
   "repository": "https://github.com/Ns-AnoNymouS/bot-status/tree/master",
   "env": {
-    "WEBHOOK": {
-      "description": "Setting this to ANYTHING will enable webhooks when in env mode",
-      "value": "ANYTHING"
-    },
-    "user_session_string": {
-      "description": "Your string session.",
+    "API_ID": {
+      "description": "Your API ID from https://my.telegram.org",
       "value": ""
     },
-    "api_id": {
-      "description": "Get this value from https://my.telegram.org",
+    "API_HASH": {
+      "description": "Your API Hash from https://my.telegram.org",
       "value": ""
     },
-    "api_hash": {
-      "description": "Get this value from https://my.telegram.org",
+    "SESSION_STRING": {
+      "description": "Your Telegram account session string. Check README for details.",
       "value": ""
     },
-    "update_channel": {
-      "description": "The id of a channel to which i need to send the current status",
+    "CHANNEL_ID": {
+      "description": "The ID of the channel where status updates will be sent",
       "value": ""
     },
-    "status_message_id": {
-      "description": "Give the id of messagw which need to be edited you can give more than one id and separt with space",
+    "MESSAGE_IDS": {
+      "description": "IDs of messages to be edited, separated by spaces if more than one",
       "value": ""
     },
-    "bots": {
-      "description": "list of bot usernames",
-      "value": "",
-      "required": false
+    "BOTS": {
+      "description": "List of bot usernames to monitor, separated by spaces",
+      "value": ""
     }
   },
-  "addons": [
+  "addons": [],
+  "buildpacks": [
+    {
+      "url": "heroku/python"
+    }
   ],
-  "buildpacks": [{
-    "url": "https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest"
-  }, {
-    "url": "heroku/python"
-  }],
   "formation": {
     "worker": {
       "quantity": 1,
-      "size": "free"
+      "size": "Eco"
     }
   }
 }
-

@@ -1,3 +1,4 @@
-pyrogram[fast]
 pytz
 tgcrypto
+python-dotenv
+pyromod==3.1.6
