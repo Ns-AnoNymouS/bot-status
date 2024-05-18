@@ -33,6 +33,16 @@
     "BOTS": {
       "description": "List of bot usernames to monitor, separated by spaces",
       "value": ""
+    },
+    "SLEEP_TIME": {
+      "description": "Time in minutes between each check",
+      "value": "",
+      "required": false
+    },
+    "GET_NOFIFIED": {
+      "description": " Set to True to receive notifications in saved messages if a bot is down (default: False)",
+      "value": "False",
+      "required": false
     }
   },
   "addons": [],

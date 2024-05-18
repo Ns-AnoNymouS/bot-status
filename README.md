@@ -27,11 +27,11 @@ Before running the bot, you need to configure the following constants in a `.env
 API_HASH = "your_api_hash"
 API_ID = "your_api_id"
 BOTS = "bot1 bot2 bot3"  # List of bot usernames to monitor (seperated by space)
-MESSAGE_IDS = "12345678, 87654321"  # List of message IDs to update (seperated by space)
+MESSAGE_IDS = "12345678 87654321"  # List of message IDs to update (seperated by space)
 CHANNEL_ID = -1001234567890  # ID of the channel where status updates are posted
 SESSION_STRING = "your_session_string" # check Generating Session String
 SLEEP_TIME = 60  # Time in minutes between each check
-GET_NOFIFIED = True  # Set to True to receive notifications if a bot is down (default: False)
+GET_NOFIFIED = True  # Set to True to receive notifications in saved messages if a bot is down (default: False)
 ```
 
 ## Generating Session String
@@ -50,29 +50,6 @@ with app:
     app.send_message("me", f"Your session string: `{SESSION_STRING}`")
     print(SESSION_STRING)
 ```
-
-## Running the Bot
-
-1. Clone the repository:
-
-    ```bash
-    git clone https://github.com/Ns-AnoNymouS/bot-status.git
-    cd bot-status
-    ```
-
-2. Install the required packages:
-
-    ```bash
-    pip install -r requirements.txt
-    ```
-
-3. Configure the constants in `.env` as mentioned [above](https://github.com/Ns-AnoNymouS/bot-status?tab=readme-ov-file#Configuration).
-
-4. Run the bot:
-
-    ```bash
-    python main.py
-    ```
 
 ## Running the Bot
 
